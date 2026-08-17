@@ -76,11 +76,7 @@ function loadSounds(container, reference, prefix) {
     container[name_raw] = sound;
     mlog("Sounds", sound)
     
-    // Create the MP3 and OGG sources for the audio
-    sound.appendChild(createElement("Source", {
-      type: "audio/mp3",
-      src: prefix + "mp3/" + name_raw + ".mp3"
-    }));
+    // Cr
     sound.appendChild(createElement("Source", {
       type: "audio/ogg",
       src: prefix + "ogg/" + name_raw + ".ogg"
