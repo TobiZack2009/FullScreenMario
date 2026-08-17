@@ -121,13 +121,16 @@ function placeThing(me, left, top) {
 }
 
 function addText(html, left, top) {
+  var canvas = window.canvas;
+  var canvasLeft = canvas ? parseInt(canvas.style.left) || 0 : 0;
+  var canvasTop = canvas ? parseInt(canvas.style.top) || 0 : 0;
   var element = createElement("div", {innerHTML: html, className: "text",
     left: left,
     top: top,
     onclick: body.onclick || canvas.onclick, 
     style: {
-      marginLeft: left + "px",
-      marginTop: top + "px"
+      marginLeft: (left + canvasLeft) + "px",
+      marginTop: (top + canvasTop) + "px"
     }});
   body.appendChild(element);
   texts.push(element);

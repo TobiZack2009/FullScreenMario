@@ -52,6 +52,7 @@ function setDataDisplay() {
     updateDataElement(data[elems[i]]);
   }
   body.appendChild(data.display);
+  resizeLetterbox();
 }
 
 // Getting rid of the display simply means removing it from body

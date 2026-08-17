@@ -28,7 +28,7 @@ canvas {
  * Game objects
  */ 
 .display {
-  position: fixed;
+  position: absolute;
   font-size: 21px;
 }
 .indisplay {

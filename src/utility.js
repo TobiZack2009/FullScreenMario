@@ -50,13 +50,25 @@ function resizeLetterbox() {
   
   var cssWidth = Math.floor(GAME_WIDTH * scale);
   var cssHeight = Math.floor(GAME_HEIGHT * scale);
+  var offsetX = Math.floor((window.innerWidth - cssWidth) / 2);
+  var offsetY = Math.floor((window.innerHeight - cssHeight) / 2);
   
   proliferate(canvas.style, {
     width: cssWidth + "px",
     height: cssHeight + "px",
-    left: Math.floor((window.innerWidth - cssWidth) / 2) + "px",
-    top: Math.floor((window.innerHeight - cssHeight) / 2) + "px"
+    left: offsetX + "px",
+    top: offsetY + "px"
   });
+  
+  // Position the HUD display inside the letterboxed canvas area
+  var display = window.data && data.display;
+  if(display) {
+    proliferate(display.style, {
+      width: cssWidth + "px",
+      left: offsetX + "px",
+      top: offsetY + "px"
+    });
+  }
 }
 
 function step(num) {
