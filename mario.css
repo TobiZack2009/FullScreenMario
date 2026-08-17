@@ -20,7 +20,8 @@ body {
 
 canvas {
   position: absolute;
-  left: 0;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
 }
 
 /*

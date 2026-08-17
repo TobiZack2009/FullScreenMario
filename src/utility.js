@@ -40,6 +40,25 @@ function getCanvas(width, height, stylemult) {
   return canv;
 }
 
+function resizeLetterbox() {
+  var canvas = window.canvas;
+  if(!canvas) return;
+  
+  var scaleX = window.innerWidth / GAME_WIDTH;
+  var scaleY = window.innerHeight / GAME_HEIGHT;
+  var scale = Math.min(scaleX, scaleY);
+  
+  var cssWidth = Math.floor(GAME_WIDTH * scale);
+  var cssHeight = Math.floor(GAME_HEIGHT * scale);
+  
+  proliferate(canvas.style, {
+    width: cssWidth + "px",
+    height: cssHeight + "px",
+    left: Math.floor((window.innerWidth - cssWidth) / 2) + "px",
+    top: Math.floor((window.innerHeight - cssHeight) / 2) + "px"
+  });
+}
+
 function step(num) {
   unpause();
   upkeep();

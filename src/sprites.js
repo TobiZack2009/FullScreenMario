@@ -3,16 +3,8 @@
 
 // Resets the main canvas and context
 function resetCanvas() {
-  // The global canvas is one that fills the screen
-  window.canvas = getCanvas(innerWidth, innerHeight, true);
-  // window.canvas = createElement(
-    // "canvas",
-    // {width: innerWidth,
-     // height: innerHeight,
-     // style: {
-       // width: innerWidth + "px",
-       // height: innerHeight + "px"
-     // }});
+  // The global canvas is fixed at GAME_WIDTH x GAME_HEIGHT, scaled via CSS
+  window.canvas = getCanvas(GAME_WIDTH, GAME_HEIGHT, false);
   // The context is saved for ease of access
   window.context = canvas.getContext("2d");
   body.appendChild(canvas);
@@ -395,7 +387,7 @@ function drawThingOnCanvas(context, me) {
   if(me.hidden) return;
   var leftc = me.left,
       topc = me.top;
-  if(leftc > innerWidth) return;
+  if(leftc > GAME_WIDTH) return;
   
   // If there's just one sprite, it's pretty simple
   // drawThingOnCanvasSingle(context, me.canvas, me, leftc, topc);

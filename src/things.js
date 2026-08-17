@@ -1823,7 +1823,7 @@ function gameOver() {
   pauseTheme();
   play("Game Over");
   
-  var innerHTML = "<div style='font-size:49px;padding-top: " + (innerHeight / 2 - 28/*49*/) + "px'>GAME OVER</div>";
+  var innerHTML = "<div style='font-size:49px;padding-top: " + (GAME_HEIGHT / 2 - 28/*49*/) + "px'>GAME OVER</div>";
   // innerHTML += "<p style='font-size:14px;opacity:.49;width:490px;margin:auto;margin-top:49px;'>";
   // innerHTML += "You have run out of lives. Maybe you're not ready for playing real games...";
   innerHTML += "</p>";
@@ -2419,7 +2419,7 @@ function movePlatformNorm(me) {
   if(me == mario.resting && me.alive) {
     setBottom(mario, me.top);
     shiftHoriz(mario, me.xvel);
-    if(mario.right > innerWidth) setRight(mario, innerWidth);
+    if(mario.right > GAME_WIDTH) setRight(mario, GAME_WIDTH);
   }
 }
 function detachMario(me) {

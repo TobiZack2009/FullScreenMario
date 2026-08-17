@@ -27,8 +27,8 @@ function createQuadrants() {
 }
 
 function setQuadDimensions() {
-  quads.width = quads.rightdiff = Math.round(window.innerWidth / (quads.cols - 3));
-  quads.height = Math.round(window.innerHeight / (quads.rows - 2));
+  quads.width = quads.rightdiff = Math.round(GAME_WIDTH / (quads.cols - 3));
+  quads.height = Math.round(GAME_HEIGHT / (quads.rows - 2));
   
   quads.delx = quads.width * -2;
 }

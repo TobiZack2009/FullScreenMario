@@ -1,6 +1,9 @@
 /* mario.js */
 // Starts everything.
 
+window.GAME_WIDTH = 512;
+window.GAME_HEIGHT = 480;
+
 function FullScreenMario() {
   var time_start = Date.now();
   
@@ -53,6 +56,8 @@ function FullScreenMario() {
   resetMeasurements();
   resetLibrary(); // A good 300+ ms right here
   resetCanvas();
+  resizeLetterbox();
+  window.addEventListener("resize", resizeLetterbox);
   resetMaps();
   resetScenery();
   resetTriggers();
@@ -145,12 +150,12 @@ function getGameScreen() {
 function resetGameScreenPosition(me) {
   me = me || window.gamescreen;
   me.left = me.top = 0;
-  me.bottom = innerHeight;
-  me.right = innerWidth;
-  me.height = innerHeight / unitsize;
-  me.width = innerWidth / unitsize;
-  me.unitheight = innerHeight;
-  me.unitwidth = innerWidth;
+  me.bottom = GAME_HEIGHT;
+  me.right = GAME_WIDTH;
+  me.height = GAME_HEIGHT / unitsize;
+  me.width = GAME_WIDTH / unitsize;
+  me.unitheight = GAME_HEIGHT;
+  me.unitwidth = GAME_WIDTH;
 }
 
 // Variables regarding the state of the game
