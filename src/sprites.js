@@ -603,3 +603,23 @@ function canvasDisableSmoothing(canvas, context) {
   context.mozImageSmoothingEnabled = false;
   context.imageSmoothingEnabled = false;
 }
+
+// --- ES Module exports ---
+Object.assign(window, {
+  resetCanvas, spriteUnravel, spriteExpand, spriteGetArray, setThingSprite,
+  getSpriteFromLibrary, expandObtainedSprite, expandObtainedSpriteMultiple,
+  findSpriteInLibrary, refillThingCanvas, refillThingCanvases, refillCanvas,
+  drawThingOnCanvas, drawThingOnCanvasSingle, drawThingOnCanvasMultiple,
+  getPaletteReferenceStarting, getPaletteReference, flipSpriteArrayHoriz,
+  flipSpriteArrayVert, flipSpriteArrayBoth, drawPatternOnCanvas,
+  clearAllSprites, memcpyU8, canvasDisableSmoothing
+});
+export default {
+  resetCanvas, spriteUnravel, spriteExpand, spriteGetArray, setThingSprite,
+  getSpriteFromLibrary, expandObtainedSprite, expandObtainedSpriteMultiple,
+  findSpriteInLibrary, refillThingCanvas, refillThingCanvases, refillCanvas,
+  drawThingOnCanvas, drawThingOnCanvasSingle, drawThingOnCanvasMultiple,
+  getPaletteReferenceStarting, getPaletteReference, flipSpriteArrayHoriz,
+  flipSpriteArrayVert, flipSpriteArrayBoth, drawPatternOnCanvas,
+  clearAllSprites, memcpyU8, canvasDisableSmoothing
+};

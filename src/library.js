@@ -823,3 +823,15 @@ function SpriteMultiple(type) {
 function getDigitSize(palette) {
   return Number(String(palette.length).length);
 }
+
+// --- ES Module exports ---
+Object.assign(window, {
+  resetLibrary, libraryParse, libraryPosts, evaluatePost, applyLibraryFilter,
+  applyPaletteFilterRecursive, applyPaletteFilter, evaluatePostMultiple,
+  SpriteMultiple, getDigitSize
+});
+export default {
+  resetLibrary, libraryParse, libraryPosts, evaluatePost, applyLibraryFilter,
+  applyPaletteFilterRecursive, applyPaletteFilter, evaluatePostMultiple,
+  SpriteMultiple, getDigitSize
+};

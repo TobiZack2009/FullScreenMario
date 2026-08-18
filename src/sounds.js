@@ -108,3 +108,15 @@ function pauseAllSounds() { for(var i in sounds) if(sounds[i]) sounds[i].pause()
 function resumeAllSounds() { for(var i in sounds) if(sounds[i]) sounds[i].play(); }
 function pauseTheme() { if(sounds.theme) sounds.theme.pause(); }
 function resumeTheme() { if(sounds.theme) sounds.theme.play(); }
+
+// --- ES Module exports ---
+Object.assign(window, {
+  resetSounds, play, playLocal, playTheme, playCurrentThemeHurry, soundFinish,
+  soundStop, toggleMute, pauseAllSounds, resumeAllSounds, pauseTheme,
+  resumeTheme
+});
+export default {
+  resetSounds, play, playLocal, playTheme, playCurrentThemeHurry, soundFinish,
+  soundStop, toggleMute, pauseAllSounds, resumeAllSounds, pauseTheme,
+  resumeTheme
+};

@@ -743,19 +743,19 @@ function updateCurrentArguments(name, reference) {
   var options = editor.options,
       html = "<table>",
       mydefaults = reference.mydefaults || {},
-      arguments = reference.arguments || {},
+      args = reference.arguments || {},
       i;
   
   // Add this thing's name
   html += "<h3 class='title'>" + name + "</h3>";
   
   // Size must be there, with or without the arguments
-  if(!arguments.width) html += addStaticOption("width", reference.width);
-  if(!arguments.height) html += addStaticOption("height", reference.height);
+  if(!args.width) html += addStaticOption("width", reference.width);
+  if(!args.height) html += addStaticOption("height", reference.height);
   
   // Add any other arguments
-  for(i in arguments) {
-    html += addArgumentOption(i.replace("_", "-"), arguments[i], null, mydefaults);
+  for(i in args) {
+    html += addArgumentOption(i.replace("_", "-"), args[i], null, mydefaults);
   }
   
   // Submit the HTML
@@ -1294,14 +1294,6 @@ function editorStoreLocally() {
   localStorage.editorLastFunc = editor.rawfunc;
 }
 
-// Checks for a previously saved function, and loads if found
-function setEditorLocalRetrieval() {
-  var found = localStorage.editorLastFunc;
-  if(!found) return;
-  editor.rawfunc = round;
-  editorSubmitGameFunc();
-}
-
 // Starts the editor with a particular function from editor.rawfunc
 function editorSubmitGameFunc() {
   // If there's no raw function known, don't do anything
@@ -1380,3 +1372,51 @@ function setEditorLocalRetrieval() {
     thingStoreVelocity(placed[i]);
   }
 }
+
+// --- ES Module exports ---
+Object.assign(window, {
+  loadEditor, setEditorLibrary, setEditorHTML, createEditorSidebar,
+  createEditorBottomBar, createEditorScrollers, editorFollowerHide,
+  editorFollowerShow, editorScrollingStart, editorScrollingStop,
+  editorScrolling, createEditorGuideLines, setEditorControls,
+  setEditorTriggers, editorMouseClick, editorSelectSection, editorSetSection,
+  editorAddBottomPreview, editorSetSectionSettings,
+  editorUpdateSettingsOption, editorSetCurrentThing,
+  editorSetCurrentThingFromCanvas, editorSetCurrentThingFromName,
+  updateCurrentArguments, addStaticOption, addArgumentOption,
+  ensureOptionsAboveZero, editorInputEnsureAboveZero, editorUpdateFollower,
+  editorGetArguments, generateInputNameValuePairs,
+  editorFollowerFollowsCursor, editorSetFollowerPosition, roundFollowerDigit,
+  roundFollowerPosition, editorFollowerUpdateStandard, editorClickControl,
+  editorPreventClicks, editorClickOff, editorControlUndo, editorControlReset,
+  editorControlSave, editorControlCancel, editorGetRawFunc, editorPreStatement,
+  editorGetStatement, editorControlErase, editorControlEraseOn,
+  editorControlEraseOff, editorPlaceEraser, Eraser, eraserErases,
+  editorControlLoad, addThingsToPlaced, editorCreateInputWindow,
+  editorCloseInputWindow, editorClose, scrollEditor, editorStoreLocally,
+  setEditorLocalRetrieval, editorSubmitGameFunc, editorSubmitGameFuncPlay,
+  editorSubmitLoad, editorStartPlaying
+});
+export default {
+  loadEditor, setEditorLibrary, setEditorHTML, createEditorSidebar,
+  createEditorBottomBar, createEditorScrollers, editorFollowerHide,
+  editorFollowerShow, editorScrollingStart, editorScrollingStop,
+  editorScrolling, createEditorGuideLines, setEditorControls,
+  setEditorTriggers, editorMouseClick, editorSelectSection, editorSetSection,
+  editorAddBottomPreview, editorSetSectionSettings,
+  editorUpdateSettingsOption, editorSetCurrentThing,
+  editorSetCurrentThingFromCanvas, editorSetCurrentThingFromName,
+  updateCurrentArguments, addStaticOption, addArgumentOption,
+  ensureOptionsAboveZero, editorInputEnsureAboveZero, editorUpdateFollower,
+  editorGetArguments, generateInputNameValuePairs,
+  editorFollowerFollowsCursor, editorSetFollowerPosition, roundFollowerDigit,
+  roundFollowerPosition, editorFollowerUpdateStandard, editorClickControl,
+  editorPreventClicks, editorClickOff, editorControlUndo, editorControlReset,
+  editorControlSave, editorControlCancel, editorGetRawFunc, editorPreStatement,
+  editorGetStatement, editorControlErase, editorControlEraseOn,
+  editorControlEraseOff, editorPlaceEraser, Eraser, eraserErases,
+  editorControlLoad, addThingsToPlaced, editorCreateInputWindow,
+  editorCloseInputWindow, editorClose, scrollEditor, editorStoreLocally,
+  setEditorLocalRetrieval, editorSubmitGameFunc, editorSubmitGameFuncPlay,
+  editorSubmitLoad, editorStartPlaying
+};

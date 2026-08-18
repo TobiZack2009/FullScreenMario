@@ -254,3 +254,19 @@ function scrollTime(dx) {
     if(map.has_lakitu) killFlip(map.has_lakitu);
   }, 70);
 }
+
+// --- ES Module exports ---
+Object.assign(window, {
+  addEvent, addEventInterval, addEventIntervalSynched, handleEvents,
+  insertSortedEvent, clearEvent, clearEventInterval, addSpriteCycle,
+  addSpriteCycleSynched, setSpriteCycle, clearClassCycles, clearClassCycle,
+  clearAllCycles, cycleClass, addSpriteCycleManual, setSpriteCycleManual,
+  removeSpriteCycle, scrollTime
+});
+export default {
+  addEvent, addEventInterval, addEventIntervalSynched, handleEvents,
+  insertSortedEvent, clearEvent, clearEventInterval, addSpriteCycle,
+  addSpriteCycleSynched, setSpriteCycle, clearClassCycles, clearClassCycle,
+  clearAllCycles, cycleClass, addSpriteCycleManual, setSpriteCycleManual,
+  removeSpriteCycle, scrollTime
+};

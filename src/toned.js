@@ -242,3 +242,7 @@ function TonedJS(give_window) {
   
   return toned;
 }
+
+// --- ES Module exports ---
+Object.assign(window, { TonedJS });
+export default { TonedJS };

@@ -885,3 +885,45 @@ function lookTowardThing(me, thing) {
     flipHoriz(me);
   }
 }
+
+// --- ES Module exports ---
+Object.assign(window, {
+  followPath, clearAllTimeouts, getCanvas, resizeLetterbox, step, fastforward,
+  specifyTimer, changeUnitsize, randTrue, randSign, randBoolJS, updatePosition,
+  updateSize, reduceHeight, shiftBoth, shiftHoriz, shiftVert, setLeft, setRight,
+  setTop, setBottom, setWidth, setHeight, setSize, setMidX, getMidX, setMidY,
+  setMidXObj, slideToXLoc, updateLeft, updateRight, updateTop, updateBottom,
+  increaseHeightTop, determineThingCollisions, checkOverlap, characterOverlapsSolid,
+  objectsTouch, charactersTouch, objectInQuadrant, objectsCollided, objectToLeft,
+  objectOnTop, objectOnSolid, solidOnCharacter, characterOnSolid, characterOnResting,
+  characterTouchedSolid, characterNotBumping, characterTouchesUp, characterHops,
+  characterIsAlive, scoreMarioShell, scoreEnemyStomp, scoreEnemyFire, scoreEnemyStar,
+  scoreEnemyBelow, scoreEnemyFin, moveSimple, moveSmart, offResting, moveJumping,
+  moveFloating, moveFloatingReal, moveSliding, moveSlidingReal, setPlatformEndpoints,
+  collideTransport, moveFalling, moveFallingScale, moveFreeFalling, shiftScaleStringVert,
+  setClass, setClassInitial, addClass, removeClass, switchClass, removeClasses,
+  addClasses, addElementClass, removeElementClass, flipHoriz, flipVert, unflipHoriz,
+  unflipVert, deleteThing, switchContainers, containerForefront, killNormal, killFlip,
+  generalMovement, blockBumpMovement, emergeUp, flicker, killOtherCharacters,
+  lookTowardMario, lookTowardThing
+});
+export default {
+  followPath, clearAllTimeouts, getCanvas, resizeLetterbox, step, fastforward,
+  specifyTimer, changeUnitsize, randTrue, randSign, randBoolJS, updatePosition,
+  updateSize, reduceHeight, shiftBoth, shiftHoriz, shiftVert, setLeft, setRight,
+  setTop, setBottom, setWidth, setHeight, setSize, setMidX, getMidX, setMidY,
+  setMidXObj, slideToXLoc, updateLeft, updateRight, updateTop, updateBottom,
+  increaseHeightTop, determineThingCollisions, checkOverlap, characterOverlapsSolid,
+  objectsTouch, charactersTouch, objectInQuadrant, objectsCollided, objectToLeft,
+  objectOnTop, objectOnSolid, solidOnCharacter, characterOnSolid, characterOnResting,
+  characterTouchedSolid, characterNotBumping, characterTouchesUp, characterHops,
+  characterIsAlive, scoreMarioShell, scoreEnemyStomp, scoreEnemyFire, scoreEnemyStar,
+  scoreEnemyBelow, scoreEnemyFin, moveSimple, moveSmart, offResting, moveJumping,
+  moveFloating, moveFloatingReal, moveSliding, moveSlidingReal, setPlatformEndpoints,
+  collideTransport, moveFalling, moveFallingScale, moveFreeFalling, shiftScaleStringVert,
+  setClass, setClassInitial, addClass, removeClass, switchClass, removeClasses,
+  addClasses, addElementClass, removeElementClass, flipHoriz, flipVert, unflipHoriz,
+  unflipVert, deleteThing, switchContainers, containerForefront, killNormal, killFlip,
+  generalMovement, blockBumpMovement, emergeUp, flicker, killOtherCharacters,
+  lookTowardMario, lookTowardThing
+};

@@ -87,3 +87,13 @@ function loadSounds(container, reference, prefix) {
     sound.play();
   }
 }
+
+// --- ES Module exports ---
+Object.assign(window, {
+  startLoadingMaps, passivelyLoadMap, setNextLevelArr, startLoadingSounds,
+  loadSounds
+});
+export default {
+  startLoadingMaps, passivelyLoadMap, setNextLevelArr, startLoadingSounds,
+  loadSounds
+};

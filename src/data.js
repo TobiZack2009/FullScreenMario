@@ -134,3 +134,15 @@ function storeMarioStats() {
 function clearMarioStats() {
   data.mariopower = mario.power = 1;
 }
+
+// --- ES Module exports ---
+Object.assign(window, {
+  DataObject, Data, resetData, setDataDisplay, clearDataDisplay, startDataTime,
+  updateDataTime, updateDataElement, score, killScore, findScore, gainLife,
+  setLives, storeMarioStats, clearMarioStats
+});
+export default {
+  DataObject, Data, resetData, setDataDisplay, clearDataDisplay, startDataTime,
+  updateDataTime, updateDataElement, score, killScore, findScore, gainLife,
+  setLives, storeMarioStats, clearMarioStats
+};

@@ -270,3 +270,13 @@ function maxlulz() {
       setAreaSetting(arr[randInt(arr.length)]);
     }, 7, Infinity, ["Overworld", "Underworld", "Underwater", "Sky", "Castle"]);
 }
+
+// --- ES Module exports ---
+Object.assign(window, {
+  resetTriggers, Controls, ControlsPipe, keydown, keyup, contextmenu,
+  mousedown, scriptKeys, lulz, superlulz, hyperlulz, maxlulz
+});
+export default {
+  resetTriggers, Controls, ControlsPipe, keydown, keyup, contextmenu,
+  mousedown, scriptKeys, lulz, superlulz, hyperlulz, maxlulz
+};

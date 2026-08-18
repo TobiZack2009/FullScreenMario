@@ -99,3 +99,15 @@ function setThingInQuadrant(me, quad) {
   ++me.numquads;
   ++quad.numthings;
 }
+
+// --- ES Module exports ---
+Object.assign(window, {
+  resetQuadrants, Quadrant, createQuadrants, setQuadDimensions, createQuads,
+  addQuadCol, shiftQuadCol, deleteQuad, updateQuads, determineAllQuadrants,
+  determineThingQuadrants, setThingInQuadrant
+});
+export default {
+  resetQuadrants, Quadrant, createQuadrants, setQuadDimensions, createQuads,
+  addQuadCol, shiftQuadCol, deleteQuad, updateQuads, determineAllQuadrants,
+  determineThingQuadrants, setThingInQuadrant
+};

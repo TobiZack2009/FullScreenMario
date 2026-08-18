@@ -1199,3 +1199,37 @@ var elems = body.getElementsByClassName("randomdisplay"),
 for(i = elems.length - 1; i >= 0; --i)  
   body.removeChild(elems[i]);
 }
+
+// --- ES Module exports ---
+Object.assign(window, {
+  resetSeed, pushRandomSectionOverworld, startRandomSectionBridge,
+  pushRandomSectionBridge, pushRandomSectionPreCastle,
+  endCastleOutsideRandom, startRandomSectionCastle, pushRandomSectionCastle,
+  endCastleInsideRandom, endCastleInsideRandomFinal, placeRandomCastleNPC,
+  pushRandomCoinRow, getNextCoinRowSize, pushRandomSectionTrees,
+  pushRandomSmallEnemy, pushRandomSectionUnderworld,
+  pushRandomUnderworldSquigglies, pushUnderworldPipes, pushUnderworldStones,
+  pushRandomSectionUnderwater, endRandomSectionUnderwater,
+  startRandomSectionSky, pushRandomSectionSky,
+  prepareNextGeneratorStandard, getRandomNextSection, pushRandomChunkEnemy,
+  pushRandomEnemy, addPipeRandom, getRandomTransport, getAfterSkyTransport,
+  pushRandomObstacle, pushRandomSolidRow, getRandomBrickItem,
+  getRandomBlockItem, pushRandomGroundScenery, pushRandomSkyScenery,
+  addDistanceCounter, addSeedDisplay, createTunnel, removeRandomDisplays
+});
+export default {
+  resetSeed, pushRandomSectionOverworld, startRandomSectionBridge,
+  pushRandomSectionBridge, pushRandomSectionPreCastle,
+  endCastleOutsideRandom, startRandomSectionCastle, pushRandomSectionCastle,
+  endCastleInsideRandom, endCastleInsideRandomFinal, placeRandomCastleNPC,
+  pushRandomCoinRow, getNextCoinRowSize, pushRandomSectionTrees,
+  pushRandomSmallEnemy, pushRandomSectionUnderworld,
+  pushRandomUnderworldSquigglies, pushUnderworldPipes, pushUnderworldStones,
+  pushRandomSectionUnderwater, endRandomSectionUnderwater,
+  startRandomSectionSky, pushRandomSectionSky,
+  prepareNextGeneratorStandard, getRandomNextSection, pushRandomChunkEnemy,
+  pushRandomEnemy, addPipeRandom, getRandomTransport, getAfterSkyTransport,
+  pushRandomObstacle, pushRandomSolidRow, getRandomBrickItem,
+  getRandomBlockItem, pushRandomGroundScenery, pushRandomSkyScenery,
+  addDistanceCounter, addSeedDisplay, createTunnel, removeRandomDisplays
+};

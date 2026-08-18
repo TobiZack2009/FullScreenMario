@@ -224,3 +224,15 @@ function mlog(type) {
     log.apply(console, arguments);
   }
 }
+
+// --- ES Module exports ---
+Object.assign(window, {
+  FullScreenMario, ensureLocalStorage, resetMeasurements, resetUnitsize,
+  resetTimer, resetGameScreen, getGameScreen, resetGameScreenPosition,
+  resetGameState, scrollWindow, shiftAll, shiftElements, scrollMario, mlog
+});
+export default {
+  FullScreenMario, ensureLocalStorage, resetMeasurements, resetUnitsize,
+  resetTimer, resetGameScreen, getGameScreen, resetGameScreenPosition,
+  resetGameState, scrollWindow, shiftAll, shiftElements, scrollMario, mlog
+};
