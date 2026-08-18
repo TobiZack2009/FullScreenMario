@@ -165,21 +165,53 @@ function maintainMario(update) {
     }
   }
   // Mario is moving to the left
-  else if(mario.left < 0) {
-    // Stop Mario from going to the left.
+  if(mario.xvel < 0) {
+    if(mario.left < gamescreen.middlex) {
+      // If Mario is to the left of the gamescreen's middle, move the gamescreen
+      if(mario.left < 0)
+        mario.xvel = max(0, mario.xvel);
+    }
+  }
+  
+  // Clamp Mario at left edge when camera can't scroll further left
+  if(gamescreen.left <= 0 && mario.left < 0) {
+    setLeft(mario, 0);
     mario.xvel = max(0, mario.xvel);
+  }
+  // Clamp Mario at right edge when camera can't scroll further right
+  var areaRight = (area.width || gamescreen.width) * unitsize;
+  if(gamescreen.right >= areaRight && mario.right > gamescreen.right - gamescreen.left) {
+    setRight(mario, gamescreen.right - gamescreen.left);
+    mario.xvel = min(0, mario.xvel);
   }
   
   // Mario is hitting something (stop jumping)
   if(mario.under) mario.jumpcount = 0;
   
-  // Scrolloffset is how far over the middle mario's right is
+  // Scrolloffset is how far over the middle mario's right is (scroll right)
   // It's multiplied by 0 or 1 for map.canscroll
-  window.scrolloffset = (map.canscroll/* || (map.random && !map.noscroll)*/) * (mario.right - gamescreen.middlex);
+  window.scrolloffset = (map.canscroll) * (mario.right - gamescreen.middlex);
+  // Clamp: don't scroll past the right edge of the area
+  var maxRightScroll = areaRight - gamescreen.right;
+  if(maxRightScroll < 0) maxRightScroll = 0;
+  scrolloffset = min(scrolloffset, maxRightScroll);
   if(scrolloffset > 0 && !map.shifting) {
     scrollWindow(lastscroll = round(min(mario.scrollspeed, scrolloffset)));
   }
   else lastscroll = 0;
+  
+  // Scroll left when mario is to the left of the midpoint
+  window.scrolleftoffset = (map.canscroll) * (gamescreen.middlex - mario.left);
+  // Clamp: don't scroll past the left edge (0)
+  if(gamescreen.left > 0) {
+    scrolleftoffset = min(scrolleftoffset, gamescreen.left);
+  } else {
+    scrolleftoffset = 0;
+  }
+  if(scrolleftoffset > 0 && !map.shifting) {
+    scrollWindow(lastscrollleft = round(min(mario.scrollspeed, scrolleftoffset)) * -1);
+  }
+  else lastscrollleft = 0;
 }
 
 // Deletion checking is done by an interval set in shiftToLocation

@@ -166,7 +166,7 @@ function resetGameState(nocount) {
   // Also reset data
   resetData();
   window.nokeys = window.spawning = window.spawnon =
-    window.notime = window.editing = window.qcount = window.lastscroll = 0;
+    window.notime = window.editing = window.qcount = window.lastscroll = window.lastscrollleft = 0;
   window.paused = window.gameon = true;
   // Shifting location shouldn't wipe the gamecount (for key histories)
   if(!nocount) window.gamecount = 0;
