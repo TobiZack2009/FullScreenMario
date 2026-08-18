@@ -252,7 +252,7 @@ function clearTexts() {
   if(window.texts)
     for(var i = texts.length - 1; i >= 0; --i)
       if(texts[i])
-        removeChildSafe(texts[i], body);
+        removeChildSafe(texts[i], canvasWrapper);
   window.texts = [];
 }
 function setAreaPostCreation() {

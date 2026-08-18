@@ -3,11 +3,20 @@
 
 // Resets the main canvas and context
 function resetCanvas() {
+  // Wrapper holds the canvas and text overlay in the same coordinate space
+  window.canvasWrapper = createElement("div", {
+    id: "game",
+    style: {
+      position: "absolute",
+      overflow: "hidden"
+    }
+  });
   // The global canvas is fixed at GAME_WIDTH x GAME_HEIGHT, scaled via CSS
   window.canvas = getCanvas(GAME_WIDTH, GAME_HEIGHT, false);
   // The context is saved for ease of access
   window.context = canvas.getContext("2d");
-  body.appendChild(canvas);
+  canvasWrapper.appendChild(canvas);
+  body.appendChild(canvasWrapper);
 }
 
 /* Sprite Parsing */

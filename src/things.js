@@ -121,18 +121,15 @@ function placeThing(me, left, top) {
 }
 
 function addText(html, left, top) {
-  var canvas = window.canvas;
-  var canvasLeft = canvas ? parseInt(canvas.style.left) || 0 : 0;
-  var canvasTop = canvas ? parseInt(canvas.style.top) || 0 : 0;
   var element = createElement("div", {innerHTML: html, className: "text",
     left: left,
     top: top,
     onclick: body.onclick || canvas.onclick, 
     style: {
-      marginLeft: (left + canvasLeft) + "px",
-      marginTop: (top + canvasTop) + "px"
+      marginLeft: left + "px",
+      marginTop: top + "px"
     }});
-  body.appendChild(element);
+  canvasWrapper.appendChild(element);
   texts.push(element);
   return element;
 }
@@ -154,7 +151,7 @@ function checkTexts() {
     element = texts[i].element || me;
     me.right = me.left + element.clientWidth
     if(me.right < delx) {
-      body.removeChild(element);
+      canvasWrapper.removeChild(element);
       killNormal(me);
       deleteThing(element, texts, i);
     }
@@ -1844,7 +1841,7 @@ function gameRestart() {
   seedlast = .007;
   body.style.visibility = "hidden";
   body.innerHTML = body.style.paddingTop = body.style.fontSize = "";
-  body.appendChild(canvas);
+  body.appendChild(canvasWrapper);
   gameon = true;
   map.random ? setMapRandom() : setMap(1,1);
   addEvent(function() { body.style.visibility = ""; });

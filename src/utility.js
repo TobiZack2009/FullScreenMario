@@ -41,8 +41,8 @@ function getCanvas(width, height, stylemult) {
 }
 
 function resizeLetterbox() {
-  var canvas = window.canvas;
-  if(!canvas) return;
+  var wrapper = window.canvasWrapper;
+  if(!wrapper) return;
   
   var scaleX = window.innerWidth / GAME_WIDTH;
   var scaleY = window.innerHeight / GAME_HEIGHT;
@@ -53,11 +53,19 @@ function resizeLetterbox() {
   var offsetX = Math.floor((window.innerWidth - cssWidth) / 2);
   var offsetY = Math.floor((window.innerHeight - cssHeight) / 2);
   
-  proliferate(canvas.style, {
+  proliferate(wrapper.style, {
     width: cssWidth + "px",
     height: cssHeight + "px",
     left: offsetX + "px",
     top: offsetY + "px"
+  });
+  
+  // Canvas fills the wrapper
+  proliferate(window.canvas.style, {
+    width: cssWidth + "px",
+    height: cssHeight + "px",
+    left: "0px",
+    top: "0px"
   });
   
   // Position the HUD display inside the letterboxed canvas area
@@ -65,8 +73,8 @@ function resizeLetterbox() {
   if(display) {
     proliferate(display.style, {
       width: cssWidth + "px",
-      left: offsetX + "px",
-      top: offsetY + "px"
+      left: "0px",
+      top: "0px"
     });
   }
 }

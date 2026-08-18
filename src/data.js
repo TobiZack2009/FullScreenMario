@@ -7,7 +7,7 @@ function resetData() {
   // Make sure there's no data display already
   var check;
   if(check = document.getElementById("data_display"))
-    body.removeChild(check);
+    removeChildSafe(check, canvasWrapper);
   
   if(!window.data) {
     window.data = new Data();
@@ -45,19 +45,18 @@ function setDataDisplay() {
               width: (gamescreen.right + 14) + "px"
             }}),
       elems = ["score", "coins", "world", "time", "lives"];
-  body.appendChild(display);
+  canvasWrapper.appendChild(display);
   data.display = display;
   for(var i in elems) {
     display.appendChild(data[elems[i]].element);
     updateDataElement(data[elems[i]]);
   }
-  body.appendChild(data.display);
   resizeLetterbox();
 }
 
 // Getting rid of the display simply means removing it from body
 function clearDataDisplay() {
-  body.removeChild(data_display);
+  removeChildSafe(data_display, canvasWrapper);
 }
 
 // Starts the interval of updating data time
@@ -107,7 +106,7 @@ function score(me, amount, appears) {
   updateDataElement(data.score);
 }
 function killScore(text) {
-  body.removeChild(text);
+  canvasWrapper.removeChild(text);
   killNormal(text);
   deleteThing(text, texts, texts.indexOf(text));
 }
