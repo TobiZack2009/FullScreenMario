@@ -106,8 +106,3 @@ Object.assign(window, {
   addQuadCol, shiftQuadCol, deleteQuad, updateQuads, determineAllQuadrants,
   determineThingQuadrants, setThingInQuadrant
 });
-export default {
-  resetQuadrants, Quadrant, createQuadrants, setQuadDimensions, createQuads,
-  addQuadCol, shiftQuadCol, deleteQuad, updateQuads, determineAllQuadrants,
-  determineThingQuadrants, setThingInQuadrant
-};

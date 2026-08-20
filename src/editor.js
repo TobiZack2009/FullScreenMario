@@ -1397,26 +1397,3 @@ Object.assign(window, {
   setEditorLocalRetrieval, editorSubmitGameFunc, editorSubmitGameFuncPlay,
   editorSubmitLoad, editorStartPlaying
 });
-export default {
-  loadEditor, setEditorLibrary, setEditorHTML, createEditorSidebar,
-  createEditorBottomBar, createEditorScrollers, editorFollowerHide,
-  editorFollowerShow, editorScrollingStart, editorScrollingStop,
-  editorScrolling, createEditorGuideLines, setEditorControls,
-  setEditorTriggers, editorMouseClick, editorSelectSection, editorSetSection,
-  editorAddBottomPreview, editorSetSectionSettings,
-  editorUpdateSettingsOption, editorSetCurrentThing,
-  editorSetCurrentThingFromCanvas, editorSetCurrentThingFromName,
-  updateCurrentArguments, addStaticOption, addArgumentOption,
-  ensureOptionsAboveZero, editorInputEnsureAboveZero, editorUpdateFollower,
-  editorGetArguments, generateInputNameValuePairs,
-  editorFollowerFollowsCursor, editorSetFollowerPosition, roundFollowerDigit,
-  roundFollowerPosition, editorFollowerUpdateStandard, editorClickControl,
-  editorPreventClicks, editorClickOff, editorControlUndo, editorControlReset,
-  editorControlSave, editorControlCancel, editorGetRawFunc, editorPreStatement,
-  editorGetStatement, editorControlErase, editorControlEraseOn,
-  editorControlEraseOff, editorPlaceEraser, Eraser, eraserErases,
-  editorControlLoad, addThingsToPlaced, editorCreateInputWindow,
-  editorCloseInputWindow, editorClose, scrollEditor, editorStoreLocally,
-  setEditorLocalRetrieval, editorSubmitGameFunc, editorSubmitGameFuncPlay,
-  editorSubmitLoad, editorStartPlaying
-};

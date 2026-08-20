@@ -115,8 +115,3 @@ Object.assign(window, {
   soundStop, toggleMute, pauseAllSounds, resumeAllSounds, pauseTheme,
   resumeTheme
 });
-export default {
-  resetSounds, play, playLocal, playTheme, playCurrentThemeHurry, soundFinish,
-  soundStop, toggleMute, pauseAllSounds, resumeAllSounds, pauseTheme,
-  resumeTheme
-};

@@ -231,8 +231,3 @@ Object.assign(window, {
   resetTimer, resetGameScreen, getGameScreen, resetGameScreenPosition,
   resetGameState, scrollWindow, shiftAll, shiftElements, scrollMario, mlog
 });
-export default {
-  FullScreenMario, ensureLocalStorage, resetMeasurements, resetUnitsize,
-  resetTimer, resetGameScreen, getGameScreen, resetGameScreenPosition,
-  resetGameState, scrollWindow, shiftAll, shiftElements, scrollMario, mlog
-};

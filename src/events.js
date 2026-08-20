@@ -263,10 +263,3 @@ Object.assign(window, {
   clearAllCycles, cycleClass, addSpriteCycleManual, setSpriteCycleManual,
   removeSpriteCycle, scrollTime
 });
-export default {
-  addEvent, addEventInterval, addEventIntervalSynched, handleEvents,
-  insertSortedEvent, clearEvent, clearEventInterval, addSpriteCycle,
-  addSpriteCycleSynched, setSpriteCycle, clearClassCycles, clearClassCycle,
-  clearAllCycles, cycleClass, addSpriteCycleManual, setSpriteCycleManual,
-  removeSpriteCycle, scrollTime
-};

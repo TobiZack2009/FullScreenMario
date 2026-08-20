@@ -141,8 +141,3 @@ Object.assign(window, {
   updateDataTime, updateDataElement, score, killScore, findScore, gainLife,
   setLives, storeMarioStats, clearMarioStats
 });
-export default {
-  DataObject, Data, resetData, setDataDisplay, clearDataDisplay, startDataTime,
-  updateDataTime, updateDataElement, score, killScore, findScore, gainLife,
-  setLives, storeMarioStats, clearMarioStats
-};

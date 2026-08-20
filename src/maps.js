@@ -617,7 +617,7 @@ function pushPreThing(type, xloc, yloc, extras, more) {
     map.area.width = max(map.area.width, prething.xloc + prething.object.width);
     map.area.presolids.push(prething);
   }
-  else map.area.prechars.push(prething);
+  else map.area.precharacters.push(prething);
   return prething;
 }
 function pushPreScenery(name, xloc, yloc, repx, repy) {
@@ -4546,29 +4546,3 @@ Object.assign(window, {
   World54, World61, World62, World63, World64, World71, World72, World73,
   World74, World81, World82, World83, World84
 });
-export default {
-  resetMaps, Map, Area, setAreaSetting, Location, PreThing, setMap,
-  setMapRandom, shiftToLocation, setAreaPreCreation, clearTexts,
-  setAreaPostCreation, getAreaFillStyle, prethingsorter,
-  setLocationGeneration, spawnMap, goToTransport, entryPlain, entryNormal,
-  entryBlank, entryRandom, enterCloudWorld, walkToPipe, startWalking,
-  intoPipeVert, intoPipeHoriz, pipePreparations, locMovePreparations,
-  startCastle, exitPipeVert, endLevel, setExitLoc, pushPreThing,
-  pushPreScenery, pushPreScenerySolid, pushPreText, fillPreThing,
-  pushPreFloor, makeCeiling, makeCeilingCastle, pushPreBridge, fillPreWater,
-  pushPrePlatformGenerator, pushPreScale, pushPreWarpWorld, goUnderWater,
-  goOntoLand, setMapGravity, setBStretch, endCastleOutside, startCastleInside,
-  endCastleInside, endCastleInsideFinal, pushPreSectionPass,
-  pushPreSectionFail, pushCastleDecider, sectionColliderInit, sectionPass,
-  sectionFail, activateSection, pushPreTree, pushPreShroom, pushPrePipe,
-  pushPreCastle, pushPreCastleBig, pushPreCastleSmall, pushPreFuncCollider,
-  pushPreFuncSpawner, zoneEnableLakitu, zoneDisableLakitu, zoneStartCheeps,
-  zoneStopCheeps, zoneEnableCheeps, zoneDisableCheeps, pushPrePattern, DtB,
-  BlankMap, World11, randMapType, randDayNight, WorldRandomOverworld,
-  WorldRandomTrees, WorldRandomUnderworld, WorldRandomUnderwater,
-  WorldRandomBridge, WorldRandomSky, WorldRandomCastle, World12, World13,
-  World14, World21, World22, World23, World24, World31, World32, World33,
-  World34, World41, World42, World43, World44, World51, World52, World53,
-  World54, World61, World62, World63, World64, World71, World72, World73,
-  World74, World81, World82, World83, World84
-};

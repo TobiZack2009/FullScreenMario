@@ -1217,19 +1217,3 @@ Object.assign(window, {
   getRandomBlockItem, pushRandomGroundScenery, pushRandomSkyScenery,
   addDistanceCounter, addSeedDisplay, createTunnel, removeRandomDisplays
 });
-export default {
-  resetSeed, pushRandomSectionOverworld, startRandomSectionBridge,
-  pushRandomSectionBridge, pushRandomSectionPreCastle,
-  endCastleOutsideRandom, startRandomSectionCastle, pushRandomSectionCastle,
-  endCastleInsideRandom, endCastleInsideRandomFinal, placeRandomCastleNPC,
-  pushRandomCoinRow, getNextCoinRowSize, pushRandomSectionTrees,
-  pushRandomSmallEnemy, pushRandomSectionUnderworld,
-  pushRandomUnderworldSquigglies, pushUnderworldPipes, pushUnderworldStones,
-  pushRandomSectionUnderwater, endRandomSectionUnderwater,
-  startRandomSectionSky, pushRandomSectionSky,
-  prepareNextGeneratorStandard, getRandomNextSection, pushRandomChunkEnemy,
-  pushRandomEnemy, addPipeRandom, getRandomTransport, getAfterSkyTransport,
-  pushRandomObstacle, pushRandomSolidRow, getRandomBrickItem,
-  getRandomBlockItem, pushRandomGroundScenery, pushRandomSkyScenery,
-  addDistanceCounter, addSeedDisplay, createTunnel, removeRandomDisplays
-};

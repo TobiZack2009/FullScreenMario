@@ -830,8 +830,3 @@ Object.assign(window, {
   applyPaletteFilterRecursive, applyPaletteFilter, evaluatePostMultiple,
   SpriteMultiple, getDigitSize
 });
-export default {
-  resetLibrary, libraryParse, libraryPosts, evaluatePost, applyLibraryFilter,
-  applyPaletteFilterRecursive, applyPaletteFilter, evaluatePostMultiple,
-  SpriteMultiple, getDigitSize
-};

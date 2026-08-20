@@ -1051,4 +1051,3 @@
 })(((typeof(module) !== 'undefined') && module.exports) || window);
 
 // --- ES Module exports ---
-export default { Gamepad: window.Gamepad };

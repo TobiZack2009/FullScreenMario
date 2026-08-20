@@ -276,7 +276,3 @@ Object.assign(window, {
   resetTriggers, Controls, ControlsPipe, keydown, keyup, contextmenu,
   mousedown, scriptKeys, lulz, superlulz, hyperlulz, maxlulz
 });
-export default {
-  resetTriggers, Controls, ControlsPipe, keydown, keyup, contextmenu,
-  mousedown, scriptKeys, lulz, superlulz, hyperlulz, maxlulz
-};

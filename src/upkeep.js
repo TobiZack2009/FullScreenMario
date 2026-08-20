@@ -231,7 +231,3 @@ Object.assign(window, {
   upkeep, adjustFPS, pause, unpause, maintainSolids, maintainCharacters,
   maintainMario, maintainTexts
 });
-export default {
-  upkeep, adjustFPS, pause, unpause, maintainSolids, maintainCharacters,
-  maintainMario, maintainTexts
-};
