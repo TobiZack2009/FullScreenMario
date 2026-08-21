@@ -1,7 +1,9 @@
-FullScreenMario
+# FullScreenMario
 ===============
 
-An HTML5 remake of the original Super Mario Brothers - expanded for modern browsing.
+A fork of an archive of Fullscreen Mario, with bugfixes and improvements. Note unlike the original, you will need Vite. This version is also designed to be built as a single file.
+
+I pontentially plan to add backport levels and assets from The Lost Levels to this game.
 ------------------------------------------------------------------------------------
 
 Here's a quick set of cheat codes you can use during the game. If you're using this through the <a href="http://www.fullscreenmario.com">fullscreenmario.com</a> UI, you'll have to reference everything as a member of 'game' (which is a link to the frame containing FSM).
