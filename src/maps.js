@@ -33,8 +33,7 @@ function resetMaps() {
     Blank: BlankMap
   }
   
-  // Maps not found, and sounds, are loaded via AJAX
-  startLoadingMaps();
+  // Maps not found inline are loaded via Vite import.meta.glob in load.js
 }
 
 // A new map, which contains general settings for the game run
@@ -1110,8 +1109,9 @@ function World11(map) {
       setLocationGeneration(0);
       
       var greeter = "";
+      var greetingUrl = (window.editorAssetUrls || {}).greeting || "";
       greeter += "<div style='width:350px;max-height:189px;background-color:#d64d00;border-radius:7px;box-shadow:3px 3px #efb28b inset, -3px -3px black inset;";
-      greeter += "background-image: url(\"Theme/Greeting.gif\"), url(\"Theme/Greeting.gif\"), url(\"Theme/Greeting.gif\"), url(\"Theme/Greeting.gif\");";
+      greeter += "background-image: url(\"" + greetingUrl + "\"), url(\"" + greetingUrl + "\"), url(\"" + greetingUrl + "\"), url(\"" + greetingUrl + "\");";
       greeter += "background-repeat: no-repeat;";
       greeter += "background-position: 7px 7px, 336px 7px, 7px 168px, 336px 168px";
       greeter += "'>";

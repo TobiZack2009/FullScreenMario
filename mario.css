@@ -227,7 +227,7 @@ canvas {
 
 /* Erasing (cursor) */
 #erasing canvas, .erasing #maplines, .erasing .mapline, .erasing #follower {
-  cursor: url(Theme/EraserTip.gif), pointer;
+  cursor: var(--editor-eraser-tip), pointer;
 }
 
 /* The Editor Follower has the same cursor as the rest of the stuff */
@@ -244,7 +244,7 @@ canvas {
   opacity: .21;
   z-index: 7;
   cursor: none;
-  background: url('Theme/Hand.gif') center center no-repeat;
+  background: var(--editor-hand) center center no-repeat;
 }
 .scroller:hover { opacity: .84; }
 .scroller.off {

@@ -1,0 +1,12 @@
+:root {
+  --editor-cancel: url(../EditorAssets/Cancel.gif);
+  --editor-erase: url(../EditorAssets/erase.gif);
+  --editor-eraser-tip: url(../EditorAssets/EraserTip.gif);
+  --editor-greeting: url(../EditorAssets/Greeting.gif);
+  --editor-hand: url(../EditorAssets/Hand.gif);
+  --editor-load: url(../EditorAssets/load.gif);
+  --editor-mario: url(../EditorAssets/Mario.gif);
+  --editor-reset: url(../EditorAssets/reset.gif);
+  --editor-save: url(../EditorAssets/save.gif);
+  --editor-undo: url(../EditorAssets/undo.gif);
+}

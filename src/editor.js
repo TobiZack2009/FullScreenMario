@@ -500,12 +500,26 @@ function createEditorGuideLines() {
   body.appendChild(parent);
 }
 
+// Read editor asset URLs from CSS variables
+function getEditorAssetUrls() {
+  var style = getComputedStyle(document.documentElement),
+      names = ["cancel", "erase", "eraser-tip", "greeting", "hand", "load", "mario", "reset", "save", "undo"],
+      urls = {}, i, val;
+  for(i = 0; i < names.length; i++) {
+    val = style.getPropertyValue("--editor-" + names[i]).trim();
+    urls[names[i]] = val.slice(4, -1);
+  }
+  window.editorAssetUrls = urls;
+  return urls;
+}
+
 // The controls supply typical ops like undo and save
 function setEditorControls(names) {
   names = names || ["load", "save", "reset", "undo"/*, "erase"*/];
   var previous = document.getElementById("controls"),
       container = createElement("div", {id: "controls"}),
       controls = editor.controls = {container: container},
+      urls = window.editorAssetUrls || getEditorAssetUrls(),
       name, div, i;
   
   // Clear anything previously existing
@@ -518,7 +532,7 @@ function setEditorControls(names) {
       id: name,
       alt: name,
       className: "control",
-      style: { backgroundImage: "url(Theme/" + name + ".gif)" },
+      style: { backgroundImage: "url(" + urls[name] + ")" },
       innerHTML: "<div class='controltext'>" + name + "</div>",
       onclick: editorClickControl
     });
