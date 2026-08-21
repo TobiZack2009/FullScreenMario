@@ -658,7 +658,7 @@ function editorAddBottomPreview(bottombar, name, ref) {
       things = bottombar.things,
       sizewidth = width * unitsizet2,
       sizeheight = height * unitsizet2,
-      context = canvas.getContext("2d"),
+      context = canvas.getContext("2d",{willReadFrequently:true}),
       csource;
   
   // For superior sharpness

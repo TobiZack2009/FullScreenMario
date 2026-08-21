@@ -14,7 +14,7 @@ function resetCanvas() {
   // The global canvas is fixed at GAME_WIDTH x GAME_HEIGHT, scaled via CSS
   window.canvas = getCanvas(GAME_WIDTH, GAME_HEIGHT, false);
   // The context is saved for ease of access
-  window.context = canvas.getContext("2d");
+  window.context = canvas.getContext("2d",{willReadFrequently:true});
   canvasWrapper.appendChild(canvas);
   body.appendChild(canvasWrapper);
 }

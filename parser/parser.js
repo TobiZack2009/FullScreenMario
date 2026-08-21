@@ -138,7 +138,7 @@ function startWorking(event) {
   
   // Create the canvas
   var canvas = document.createElement("canvas"),
-      context = canvas.getContext("2d");
+      context = canvas.getContext("2d",{willReadFrequently:true});
   
   // Create the image
   var img = document.createElement("image");
